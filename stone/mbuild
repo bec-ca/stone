@@ -1,0 +1,49 @@
+cpp_binary:
+  name: example
+  libs: example_main
+
+cpp_library:
+  name: example_main
+  sources: example_main.cpp
+  libs:
+    /bee/format
+    /bee/format_optional
+    /command/command_builder
+    /command/group_builder
+    stone_reader
+    stone_writer
+
+cpp_library:
+  name: header
+  headers: header.hpp
+
+cpp_library:
+  name: stone
+  headers: stone.hpp
+
+cpp_library:
+  name: stone_reader
+  sources: stone_reader.cpp
+  headers: stone_reader.hpp
+  libs:
+    /bee/binary_format
+    /bee/data_buffer
+    /bee/error
+    /bee/file_descriptor
+    /bee/file_path
+    /bee/hash_functions
+    /yasf/cof
+    header
+
+cpp_library:
+  name: stone_writer
+  sources: stone_writer.cpp
+  headers: stone_writer.hpp
+  libs:
+    /bee/binary_format
+    /bee/error
+    /bee/file_writer
+    /bee/hash_functions
+    /yasf/cof
+    header
+
