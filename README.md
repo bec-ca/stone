@@ -1,5 +1,3 @@
-# Command
+# Stone
 
-Command is a C++ library for parsing command line flags
-
-TODO: Add example
+Stone is a C++ library to write and read static lookup tables on disk.
